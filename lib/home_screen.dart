@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'app_routes.dart';
+import 'implicit_animation/implicit_animation_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,17 +11,21 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Animações Implícitas e Explícitas'),
       ),
-      body: Column(
-        children: [
-          InkWell(
-            child: const Text('Animação Implícita'),
-            onTap: () => Navigator.pushNamed(
-              context,
-              AppRoutes.FAB_IMPLICIT_ANIMATION,
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          children: [
+            GestureDetector(
+              child: const Text('Fab Animation'),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ImplicitAnimationScreen(),
+                ),
+              ),
             ),
-          ),
-          const Text('Animação Explícita'),
-        ],
+          ],
+        ),
       ),
     );
   }

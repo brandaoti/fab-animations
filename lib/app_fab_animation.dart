@@ -15,13 +15,7 @@ class AppFabAnimation extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routes: {
-        AppRoutes.HOME: ((context) => const HomeScreen()),
-        AppRoutes.FAB_IMPLICIT_ANIMATION: ((context) =>
-            const ImplicitAnimationScreen()),
-        AppRoutes.FAB_EXPLICIT_ANIMATION: ((context) =>
-            const ExplicitAnimationScreen()),
-      },
+      home: const HomeScreen(),
     );
   }
 }

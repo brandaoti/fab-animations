@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const _duration = Duration(seconds: 3);
+import 'fab_implicit_animation.dart';
 
 class ImplicitAnimationScreen extends StatelessWidget {
   const ImplicitAnimationScreen({Key? key}) : super(key: key);
@@ -8,12 +8,8 @@ class ImplicitAnimationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Animação Implícita'),
-      ),
-      body: AnimatedContainer(
-        duration: _duration,
-      ),
+      appBar: AppBar(title: const Text('Animação Implícita')),
+      body: const FabImplicitAnimation(),
     );
   }
 }
